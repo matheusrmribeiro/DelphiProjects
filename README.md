@@ -2,6 +2,8 @@
 
 These tips was tested on Windows 7 and Windows 10
 
+
+
 ## VCLBorderlessForm
 **What I learned**
 * Create a borderless form without losing common Windows commands
