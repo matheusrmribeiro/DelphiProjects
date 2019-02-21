@@ -14,3 +14,5 @@ WIN + ↓ (Minimize the form)
 WIN + →(Align the form Right)
 WIN + ←(Align the form Left)
 ```
+
+*I'm still translating from Portuguese to English*
