@@ -5,12 +5,11 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Imaging.pngimage,
-  Vcl.StdCtrls, Vcl.ComCtrls, DwmApi, JvComponentBase, JvWndProcHook;
+  Vcl.StdCtrls, Vcl.ComCtrls, DwmApi, JvComponentBase, JvWndProcHook, Method.Colors;
 
 type
   TProc    = procedure of Object;
   TBorda   = (bLeft, bTop, bRight, bBottom, bBottomLeft, bBottomRight);
-  TTipoCor = (tcEscura, tcClara);
 
   TfrmBase = class(TForm)
     pnlActionBar: TPanel;
@@ -47,7 +46,6 @@ type
     procedure setCaption(const Value: String);
     procedure setSubCaption(const Value: String);
     procedure setFormColor(const Value: TColor);
-    function CorEscura(ACor: TColor): TColor;
   public
     constructor Create(AOwner: TComponent; AControlarForm: Boolean = True);
     property ControleForm: Boolean read FControleForm write setControleForm;
@@ -66,17 +64,7 @@ implementation
 {$R *.dfm}
 
 procedure TfrmBase.WmNCCalcSize(var Msg: TWMNCCalcSize);
-var
-  R: TRect;
 begin
-  if not Msg.CalcValidRects then
-    R := PRect(Msg.CalcSize_Params)^;
-  inherited;
-  if Msg.CalcValidRects then
-    Msg.CalcSize_Params.rgrc0 := Msg.CalcSize_Params.rgrc1
-  else
-    PRect(Msg.CalcSize_Params)^ := R;
-
   Msg.Result := 0;
 end;
 
@@ -267,18 +255,6 @@ begin
   pnlMinimize.Color   := FFormColor;
   pnlMaximize.Color   := FFormColor;
   pnlMaximize.Color   := FFormColor;
-end;
-
-function TfrmBase.CorEscura(ACor: TColor): TColor;
-var
-  sNewColor: String;
-begin
-  sNewColor := ('$'
-               +IntToHex(GetBValue(ACor) + 15, 2)
-               +IntToHex(GetGValue(ACor) + 15, 2)
-               +IntToHex(GetRValue(ACor) + 15, 2));
-
-  Result := StringToColor(sNewColor);
 end;
 
 end.

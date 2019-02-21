@@ -3,7 +3,8 @@ program VCLBorderless;
 uses
   Vcl.Forms,
   View.Principal in 'View\View.Principal.pas' {ViewHome},
-  View.Base in 'View\View.Base.pas' {frmBase};
+  View.Base in 'View\View.Base.pas' {frmBase},
+  Method.Colors in 'Method\Method.Colors.pas';
 
 {$R *.res}
 

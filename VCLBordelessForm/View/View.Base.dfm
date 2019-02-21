@@ -1,10 +1,10 @@
 object frmBase: TfrmBase
   Left = 0
   Top = 0
-  BorderStyle = bsSingle
+  BorderStyle = bsNone
   Caption = 'frmBase'
-  ClientHeight = 244
-  ClientWidth = 543
+  ClientHeight = 273
+  ClientWidth = 549
   Color = clGray
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,6 +14,7 @@ object frmBase: TfrmBase
   KeyPreview = True
   OldCreateOrder = False
   Position = poScreenCenter
+  ScreenSnap = True
   OnCreate = FormCreate
   OnMouseDown = FormMouseDown
   OnMouseMove = FormMouseMove
@@ -24,8 +25,8 @@ object frmBase: TfrmBase
     AlignWithMargins = True
     Left = 5
     Top = 67
-    Width = 533
-    Height = 169
+    Width = 539
+    Height = 198
     Margins.Left = 5
     Margins.Top = 0
     Margins.Right = 5
@@ -35,14 +36,14 @@ object frmBase: TfrmBase
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 523
-    ExplicitHeight = 159
+    ExplicitWidth = 533
+    ExplicitHeight = 169
   end
   object pnlTop: TPanel
     AlignWithMargins = True
     Left = 5
     Top = 8
-    Width = 533
+    Width = 539
     Height = 59
     Margins.Left = 5
     Margins.Top = 8
@@ -51,12 +52,12 @@ object frmBase: TfrmBase
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitWidth = 523
+    ExplicitWidth = 533
     object pnlActionBar: TPanel
       AlignWithMargins = True
       Left = 3
       Top = 3
-      Width = 527
+      Width = 533
       Height = 33
       Align = alTop
       BevelOuter = bvNone
@@ -66,7 +67,7 @@ object frmBase: TfrmBase
       TabOrder = 0
       OnDblClick = imgMaximizeClick
       OnMouseDown = pnlActionBarMouseDown
-      ExplicitWidth = 517
+      ExplicitWidth = 527
       object lblCaption: TLabel
         AlignWithMargins = True
         Left = 37
@@ -487,7 +488,7 @@ object frmBase: TfrmBase
         OnMouseDown = pnlActionBarMouseDown
       end
       object pnlClose: TPanel
-        Left = 496
+        Left = 502
         Top = 0
         Width = 31
         Height = 33
@@ -500,7 +501,7 @@ object frmBase: TfrmBase
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 486
+        ExplicitLeft = 496
         object imgClose: TImage
           AlignWithMargins = True
           Left = 3
@@ -533,7 +534,7 @@ object frmBase: TfrmBase
         end
       end
       object pnlMinimize: TPanel
-        Left = 434
+        Left = 440
         Top = 0
         Width = 31
         Height = 33
@@ -546,7 +547,7 @@ object frmBase: TfrmBase
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 1
-        ExplicitLeft = 424
+        ExplicitLeft = 434
         object imgMinimize: TImage
           AlignWithMargins = True
           Left = 5
@@ -581,7 +582,7 @@ object frmBase: TfrmBase
         end
       end
       object pnlMaximize: TPanel
-        Left = 465
+        Left = 471
         Top = 0
         Width = 31
         Height = 33
@@ -594,7 +595,7 @@ object frmBase: TfrmBase
         Font.Style = [fsBold]
         ParentFont = False
         TabOrder = 2
-        ExplicitLeft = 455
+        ExplicitLeft = 465
         object imgMaximize: TImage
           AlignWithMargins = True
           Left = 3
@@ -630,7 +631,7 @@ object frmBase: TfrmBase
     object pnlSubCaption: TPanel
       Left = 0
       Top = 39
-      Width = 533
+      Width = 539
       Height = 20
       Margins.Left = 2
       Margins.Top = 2
@@ -642,12 +643,12 @@ object frmBase: TfrmBase
       ParentBackground = False
       TabOrder = 1
       OnMouseDown = pnlActionBarMouseDown
-      ExplicitWidth = 523
+      ExplicitWidth = 533
       object lblSubCaption: TLabel
         AlignWithMargins = True
         Left = 10
         Top = 0
-        Width = 520
+        Width = 526
         Height = 17
         Margins.Left = 10
         Margins.Top = 0
